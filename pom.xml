@@ -11,6 +11,7 @@
     <module>remainder.dao</module>
     <module>remainder.service</module>
     <module>remainder.entity</module>
+      <module>nnn</module>
   </modules>
   <name>remainder.main</name>
   <url>http://maven.apache.org</url>

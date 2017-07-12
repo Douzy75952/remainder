@@ -21,7 +21,7 @@ public class MybatisMain {
 		boolean overwrite = true;
 		String projectBasePath = new File("").getAbsolutePath();
 		File fileConfigFile = new File(projectBasePath
-				+ "/algorithm.common/src/main/java/com/thinkjoy/tools/genertor/config/generatorConfig.xml");
+				+ "/remainder.common/src/main/java/cn/douzy/tools/genertor/config/generatorConfig.xml");
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		try {
 			Configuration config = cp.parseConfiguration(fileConfigFile);

@@ -5,10 +5,10 @@
 <generatorConfiguration>
 	<context id="mysqlTables" targetRuntime="MyBatis3">
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
-		<plugin type="com.thinkjoy.tools.genertor.plugins.MysqlPaginationPlugin" />
+		<plugin type="cn.douzy.tools.genertor.plugins.MysqlPaginationPlugin" />
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://10.136.53.129:33065/zgk2" userId="admin"
-			password="Gk360@test" />
+			connectionURL="jdbc:mysql://59.110.4.123:3306/remainder" userId="root"
+			password="445652261" />
 
 		<!-- 指定生成的类型为java类型，避免数据库中number等类型字段 -->
 		<javaTypeResolver>
@@ -16,31 +16,40 @@
 		</javaTypeResolver>
 
 		<!-- 生成model模型，对应的包，存放位置可以指定具体的路径,如/ProjectName/src，也可以使用MAVEN来自动生成 -->
-		<javaModelGenerator targetPackage="com.thinkjoy.report.entity"
-			targetProject="/Volumes/Transcend/douzy/work/thinkjoy/algorithm/algorithm.entity/src/main/java">
+		<javaModelGenerator targetPackage="cn.douzy.remainder.entity"
+			targetProject="F:\project\remainder\remainder.entity\src\main\java">
 			<property name="enableSubPackages" value="false" />
 			<property name="trimStrings" value="true" />
 
 		</javaModelGenerator>
 
 		<!--对应的xml mapper文件 -->
-		<sqlMapGenerator targetPackage="com.thinkjoy.report.dao"
-			targetProject="/Volumes/Transcend/douzy/work/thinkjoy/algorithm/algorithm.dao/src/main/java">
+		<sqlMapGenerator
+			targetProject="F:\project\remainder\remainder.dao\src\main" targetPackage="mapping">
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 
 		<!-- 对应的dao接口 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.thinkjoy.report.dao"
-			targetProject="/Volumes/Transcend/douzy/work/thinkjoy/algorithm/algorithm.dao/src/main/java">
+			targetPackage="cn.douzy.remainder.dao"
+			targetProject="F:\project\remainder\remainder.dao\src\main\java">
 			<property name="enableSubPackages" value="false" />
 
 		</javaClientGenerator>
 
-		<table schema="zgk2" tableName="zgk_university_enrolling"
-			domainObjectName="ZgkUniversityEnrolling" enableSelectByExample="false"
+		<table schema="remainder" tableName="record"
+			domainObjectName="Record" enableSelectByExample="false"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" />
 
+		<table schema="remainder" tableName="content"
+			   domainObjectName="Content" enableSelectByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" />
+
+		<table schema="remainder" tableName="con_type"
+			   domainObjectName="ConType" enableSelectByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" />
 	</context>
 </generatorConfiguration>

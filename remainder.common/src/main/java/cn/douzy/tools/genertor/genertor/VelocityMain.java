@@ -15,9 +15,9 @@ public class VelocityMain {
 		// TODO Auto-generated method stub
 		String projectBasePath = new File("").getAbsolutePath();
 		
-		String mapperBasePath = "/Volumes/Transcend/douzy/work/thinkjoy/algorithm/algorithm.dao/src/main/java/com/thinkjoy/report/dao/";
-		String mapper_package_name="com.thinkjoy.report.dao";
-		String object_package_name="com.thinkjoy.report.entity";
+		String mapperBasePath = "F:\\project\\remainder\\remainder.dao\\src\\main\\java\\cn\\douzy\\remainder\\dao\\";
+		String mapper_package_name="cn.douzy.remainder.dao";
+		String object_package_name="cn.douzy.remainder.entity";
 
 		File mapperFile = new File(mapperBasePath);
 		if (!mapperFile.exists())
@@ -25,7 +25,7 @@ public class VelocityMain {
 		if (!filerFile(mapperBasePath + modelName + "Mapper")) {
 
 			String[] args = new String[] { "3",
-					projectBasePath + "/algorithm.common/src/main/java/com/thinkjoy/tools/genertor/velocity/",
+					projectBasePath + "/remainder.common/src/main/java/cn/douzy/tools/genertor/velocity/",
 					"Object.properties", "ObjectMapper.vm", modelName,
 					mapperBasePath, pk ,mapper_package_name,object_package_name};
 
